@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastShop - Cadastros</title>
+</head>
+<body>
+    <header>
+    <div class="container-fluid head">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" accesskey="p" href={{url_for('index')}}>Página Inicial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{url_for('cad_usuarios')}}>Cadastros de Usuários</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Cadastros de Anuncios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{url_for('relat_compra')}}>Relatórios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{url_for('anuncios_fav')}}>Anuncios Favoritos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{url_for('anuncios_duv')}}>Dúvidas sobre Anuncios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{url_for('anuncios_categ')}}>Categoria de Anuncios</a>
+              </li>
+        </ul>	
+    </div>
+    </header>
+    <h1>{{titulocadanuncio}}</h1>
+    <form action="cad_anu" method="post">
+        <p><label for="title">Titulo do Anuncio</label></p>
+        <p><Input type="text" id="title" name="title"></p>
+
+        <p><label for="categ">Categoria do Produto</label></p>
+        <p><Input type="text" id="categ" name="categ"></p>
+
+        <p><label for="Desc">Descrição do Anuncio</label></p>
+        <p><Input type="text" id="Desc" name="Desc"></p>
+
+        <p><label for="ID">Identificador do Produto</label></p>
+        <p><Input type="text" id="ID" name="ID"></p>
+
+        <p> <label for="price">Preço Unitário</label></p>
+        <p><input type="number" id="price" name="price" step="0.01"></p>
+
+        <p><label for="Qtd">Quantidade</label></p>
+        <p><input type="number" id="Qtd" name="Qtd"></p>
+
+        <p><Input type="submit" value="Cadastrar"></p>
+    </form>
+    
+</body>
+</html>
